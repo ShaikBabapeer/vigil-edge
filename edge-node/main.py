@@ -5,10 +5,8 @@ import time
 from ultralytics import YOLO
 
 # --- CONFIGURATION ---
-SERVER_URL = "vigil-edge-nf40p55uo-shaik-babapeers-projects.vercel.app"
+SERVER_URL = "https://vigil-edge-frontend.vercel.app/api/alert"
 
-# 10+ TARGETS (Mapped from Standard COCO Dataset)
-# We categorize them into threat levels below.
 TARGET_CLASSES = [
     "cell phone", "knife", "scissors", "baseball bat", 
     "fork", "bottle", "wine glass", 
