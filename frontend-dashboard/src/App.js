@@ -7,7 +7,7 @@ function App() {
 
   const fetchAlerts = async () => {
     try {
-      const response = await axios.get('https://vigil-edge-backend.vercel.app/api/alerts');
+      const response = await axios.get('https://vigil-edge-backend.vercel.app/api/alerts');      
       setAlerts(response.data);
     } catch (error) {
       console.error("Error fetching alerts:", error);
