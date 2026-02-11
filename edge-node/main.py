@@ -5,7 +5,7 @@ import time
 from ultralytics import YOLO
 
 # --- CONFIGURATION ---
-SERVER_URL = "http://localhost:5000/api/alert"
+SERVER_URL = "vigil-edge-nf40p55uo-shaik-babapeers-projects.vercel.app"
 
 # 10+ TARGETS (Mapped from Standard COCO Dataset)
 # We categorize them into threat levels below.
