@@ -1,0 +1,95 @@
+/* App.css - Advanced Security Theme */
+body {
+  background-color: #0b0c10;
+  color: #c5c6c7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+.header {
+  background: linear-gradient(90deg, #1f2833 0%, #0b0c10 100%);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #66fcf1;
+  box-shadow: 0 0 20px rgba(102, 252, 241, 0.1);
+}
+
+.header h1 { margin: 0; color: #66fcf1; text-transform: uppercase; letter-spacing: 2px; }
+.header p { margin: 5px 0 0; font-size: 0.9rem; color: #45a29e; }
+
+.alert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+/* Base Card Style */
+.alert-card {
+  background-color: #1f2833;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.alert-card:hover { transform: scale(1.02); }
+
+/* --- DYNAMIC THREAT COLORS --- */
+/* High Threat (Red) */
+.card-high { border: 2px solid #ff0000; box-shadow: 0 0 15px rgba(255, 0, 0, 0.4); }
+.card-high .badge { background-color: #ff0000; animation: blink-red 1s infinite; }
+.card-high h3 { color: #ff0000; }
+
+/* Medium Threat (Orange/Purple) */
+.card-medium { border: 2px solid #ffa500; }
+.card-medium .badge { background-color: #ffa500; color: black; }
+.card-medium h3 { color: #ffa500; }
+
+/* Low Threat (Yellow/Blue) */
+.card-low { border: 2px solid #00d2d3; }
+.card-low .badge { background-color: #00d2d3; color: black; }
+.card-low h3 { color: #00d2d3; }
+
+/* Animations */
+@keyframes blink-red { 
+  0% { opacity: 1; box-shadow: 0 0 10px red; } 
+  50% { opacity: 0.5; box-shadow: 0 0 0 transparent; } 
+  100% { opacity: 1; box-shadow: 0 0 10px red; } 
+}
+
+.alert-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  background-color: rgba(0,0,0,0.3);
+  font-weight: bold;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+.evidence-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  filter: contrast(1.1); /* Enhance image visibility */
+}
+
+.alert-footer { padding: 15px; text-align: center; }
+.alert-footer h3 { margin: 0; font-size: 1.2rem; }
+.alert-footer p { margin: 5px 0 0; font-size: 0.8rem; opacity: 0.7; }
+
+.no-data { 
+  grid-column: 1 / -1; 
+  text-align: center; 
+  margin-top: 50px; 
+  font-size: 1.5rem; 
+  color: #45a29e; 
+}
